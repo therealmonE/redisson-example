@@ -1,5 +1,6 @@
 package io.github.therealmone.redisson.example.service;
 
+import io.github.therealmone.redisson.example.dto.UpdateDocumentRequest;
 import io.github.therealmone.redisson.example.model.Document;
 
 import java.util.List;
@@ -12,5 +13,7 @@ public interface DocumentService {
     List<Document> getAllDocuments();
 
     Document createNewDocument();
+
+    void updateDocument(UUID documentId, UpdateDocumentRequest updateDocumentRequest);
 
 }

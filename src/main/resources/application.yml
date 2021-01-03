@@ -7,3 +7,6 @@ spring:
       database: redisson
       host: localhost
       port: 27017
+
+redis:
+  address: "redis://localhost:6379"
