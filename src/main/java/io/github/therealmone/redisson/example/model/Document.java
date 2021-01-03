@@ -18,6 +18,8 @@ public class Document implements Persistable<UUID> {
     @Id
     private UUID id;
 
+    private boolean locked;
+
     @Override
     @JsonIgnore
     public boolean isNew() {
