@@ -29,7 +29,7 @@ public class LockServiceImpl implements LockService {
             throw new NoSuchElementException();
         }
 
-        val lock = redissonClient.getLock(documentId.toString());
+        val lock = redissonClient.getFairLock(documentId.toString());
 
         if (lock.tryLock(5, TimeUnit.SECONDS)) {
             try {
